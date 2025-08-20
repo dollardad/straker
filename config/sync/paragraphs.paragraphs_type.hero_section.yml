@@ -1,0 +1,10 @@
+uuid: f2d50481-ed6e-4b88-a1f4-e37eb8d04b53
+langcode: en
+status: true
+dependencies: {  }
+id: hero_section
+label: 'Hero Section'
+icon_uuid: null
+icon_default: null
+description: 'Full-width hero section with background image'
+behavior_plugins: {  }

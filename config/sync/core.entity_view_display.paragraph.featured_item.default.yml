@@ -1,0 +1,43 @@
+uuid: ede4527a-b917-4576-91ef-966c3434fe2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_item.field_description
+    - field.field.paragraph.featured_item.field_icon
+    - field.field.paragraph.featured_item.field_title
+    - paragraphs.paragraphs_type.featured_item
+  module:
+    - image
+id: paragraph.featured_item.default
+targetEntityType: paragraph
+bundle: featured_item
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

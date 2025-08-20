@@ -1,0 +1,10 @@
+uuid: e47cab2c-abc2-462d-8d23-8078d4c1ae30
+langcode: en
+status: true
+dependencies: {  }
+id: featured_item
+label: 'Featured Item'
+icon_uuid: null
+icon_default: null
+description: 'Individual feature with icon, title and description'
+behavior_plugins: {  }

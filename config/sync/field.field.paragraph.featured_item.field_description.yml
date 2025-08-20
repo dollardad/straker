@@ -1,0 +1,19 @@
+uuid: 5b447a3c-4871-49e6-a3c3-7053b07ce30e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.featured_item
+id: paragraph.featured_item.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: featured_item
+label: Description
+description: 'Enter your description here (Optional)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

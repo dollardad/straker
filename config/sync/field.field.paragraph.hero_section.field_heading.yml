@@ -1,0 +1,19 @@
+uuid: e92bab80-23d7-4863-b0bf-c814a6bec0d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.hero_section
+id: paragraph.hero_section.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: hero_section
+label: Heading
+description: 'Add page main heading'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

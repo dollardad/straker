@@ -1,0 +1,19 @@
+uuid: 46ae5070-389a-4363-abc3-d2832b2a8c4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_button_label
+    - paragraphs.paragraphs_type.cta_block
+id: paragraph.cta_block.field_cta_button_label
+field_name: field_cta_button_label
+entity_type: paragraph
+bundle: cta_block
+label: 'CTA Button'
+description: 'Button label (max 60 characters)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

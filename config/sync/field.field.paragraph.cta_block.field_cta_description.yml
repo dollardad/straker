@@ -1,0 +1,19 @@
+uuid: f5a79be0-3181-4a0b-a49d-ce86b9114c7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_description
+    - paragraphs.paragraphs_type.cta_block
+id: paragraph.cta_block.field_cta_description
+field_name: field_cta_description
+entity_type: paragraph
+bundle: cta_block
+label: 'CTA Description'
+description: 'Add call to action description.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,30 @@
+uuid: 8716cc9a-5952-45e4-8c55-b33aee8d6490
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_cta_background_style
+field_name: field_cta_background_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: primary_primary_blue|accent
+      label: 'Accent (Orange)'
+    -
+      value: secondary_secondary_grey|dark
+      label: Dark
+    -
+      value: light_light|light
+      label: Light
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

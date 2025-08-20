@@ -1,0 +1,10 @@
+uuid: 54d9d8ce-d995-4705-b06e-6a61fdcb7061
+langcode: en
+status: true
+dependencies: {  }
+id: cta_block
+label: 'CTA Block'
+icon_uuid: null
+icon_default: null
+description: 'Call to action block, not the same as hero.'
+behavior_plugins: {  }
