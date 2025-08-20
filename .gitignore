@@ -1,0 +1,36 @@
+# Drupal core and contributed files
+/web/core
+/web/modules/contrib
+/web/themes/contrib
+/web/profiles/contrib
+/web/libraries
+/web/sites/default/files
+/web/sites/default/settings.local.php
+/web/sites/*/settings.local.php
+/web/sites/*/services*.yml
+
+# Vendor directory
+/vendor
+
+# Node modules (if using)
+node_modules
+
+# DDEV
+.ddev/config.local.yaml
+.ddev/docker-compose.*.yaml
+.ddev/db_snapshots
+.ddev/.global_commands
+
+# IDE and OS files
+.DS_Store
+.idea
+.vscode
+*.sublime-*
+Thumbs.db
+
+# Temporary files
+*.sql
+*.sql.gz
+*.zip
+*.tar.gz
+private/backup_migrate
