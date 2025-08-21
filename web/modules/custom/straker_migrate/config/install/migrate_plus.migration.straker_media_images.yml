@@ -1,0 +1,35 @@
+id: straker_media_images
+label: Straker Blog Header Images (File → Media:image)
+migration_group: straker
+source:
+  plugin: csv
+  path: modules/custom/straker_migrate/data/blog.csv
+  header_row_count: 1
+  ids:
+    - Blog Slug
+  fields:
+    - name: Blog Title
+      label: Blog Title
+    - name: Blog Slug
+      label: Blog Slug
+    - name: Thumbnail Image
+      label: Thumbnail Image
+process:
+  bundle:
+    plugin: default_value
+    default_value: image
+  name: Blog Title
+  field_media_image/target_id:
+    plugin: migration_lookup
+    migration: straker_files
+    source: Blog Slug
+  field_media_image/alt: Blog Title
+  status:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:media'
+  default_bundle: image
+migration_dependencies:
+  required:
+    - straker_files

@@ -1,0 +1,32 @@
+id: straker_files
+label: Straker Blog Files (CSV → entity:file)
+migration_group: straker
+source:
+  plugin: csv
+  path: modules/custom/straker_migrate/data/blog.csv
+  header_row_count: 1
+  ids:
+    - Blog Slug
+  fields:
+    - name: Blog Title
+      label: Blog Title
+    - name: Blog Slug
+      label: Blog Slug
+    - name: Thumbnail Image
+      label: Thumbnail Image
+process:
+  uri:
+    plugin: download
+    source: Thumbnail Image
+    file_directory: 'public://blog_headers'
+    rename: true
+  filename:
+    plugin: callback
+    callable: basename
+    source: '@uri'
+  status:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:file'
+migration_dependencies: {  }

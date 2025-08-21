@@ -1,0 +1,9 @@
+name: Straker Migrate
+type: module
+description: CSV migrations for Straker.ai (blog + media)
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - migrate_plus
+  - migrate_tools
+  - migrate_source_csv

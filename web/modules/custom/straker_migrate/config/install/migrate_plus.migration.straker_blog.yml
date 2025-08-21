@@ -1,0 +1,107 @@
+id: straker_blog
+label: Straker Blog (CSV → node:blog)
+migration_group: straker
+source:
+  plugin: csv
+  path: modules/custom/straker_migrate/data/blog.csv
+  header_row_count: 1
+  ids:
+    - Blog Slug
+  fields:
+    - name: Blog Title
+      label: Blog Title
+    - name: Blog Slug
+      label: Blog Slug
+    - name: Rich Text
+      label: Rich Text
+    - name: Thumbnail Image
+      label: Thumbnail Image
+    - name: Tag
+      label: Tag
+    - name: Author
+      label: Author
+    - name: Blog Post Date
+      label: Blog Post Date
+    - name: Published On
+      label: Published On
+process:
+  type:
+    plugin: default_value
+    default_value: blog
+
+  title: Blog Title
+
+  # Main content (keep HTML)
+  field_main_content/value: Rich Text
+  field_main_content/format:
+    plugin: default_value
+    default_value: basic_html
+
+  # Summary auto-generate: strip tags → decode → 160 chars
+  _stripped:
+    plugin: callback
+    callable: strip_tags
+    source: Rich Text
+  _decoded:
+    plugin: callback
+    callable: html_entity_decode
+    source: '@_stripped'
+  field_summary:
+    plugin: callback
+    callable: mb_substr
+    source: '@_decoded'
+    arguments: [0, 160]
+
+  field_author_display: Author
+
+  # Date: prefer 'Blog Post Date', fallback to 'Published On'
+  _raw_date:
+    plugin: coalesce
+    source:
+      - Blog Post Date
+      - Published On
+  _timestamp:
+    plugin: callback
+    callable: strtotime
+    source: '@_raw_date'
+  field_published_date:
+    plugin: format_date
+    from_format: 'U'
+    to_format: 'Y-m-d'
+    source: '@_timestamp'
+
+  # Tags — split on comma; create/attach terms in 'tags' vocabulary
+  _tags_split:
+    plugin: explode
+    delimiter: ','
+    source: Tag
+  field_tags:
+    plugin: entity_generate
+    value_key: name
+    bundle_key: vid
+    bundle: tags
+    source: '@_tags_split'
+
+  # Header image: reference media created earlier
+  field_blog_image/target_id:
+    plugin: migration_lookup
+    migration: straker_media_images
+    source: Blog Slug
+
+  # Alias: /blog/<slug>
+  path/alias:
+    plugin: concat
+    source:
+      - '/blog/'
+      - Blog Slug
+
+  status:
+    plugin: default_value
+    default_value: 1
+
+destination:
+  plugin: 'entity:node'
+  default_bundle: blog
+migration_dependencies:
+  required:
+    - straker_media_images

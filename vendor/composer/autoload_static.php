@@ -27,6 +27,7 @@ class ComposerStaticInit9d559ab354f63dc7e9a3fc1a03ad7d46
         '2f69d3914119f042cca9e44442d5ce95' => __DIR__ . '/../..' . '/web/core/includes/bootstrap.inc',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '47e1160838b5e5a10346ac4084b58c23' => __DIR__ . '/..' . '/laravel/prompts/src/helpers.php',
+        '9e4824c5afbdc1482b6025ce3d4dfde8' => __DIR__ . '/..' . '/league/csv/src/functions_include.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
     );
 
@@ -36,6 +37,10 @@ class ComposerStaticInit9d559ab354f63dc7e9a3fc1a03ad7d46
             'phpowermove\\docblock\\' => 21,
             'phootwork\\lang\\' => 15,
             'phootwork\\collection\\' => 21,
+        ),
+        'e' => 
+        array (
+            'enshrined\\svgSanitize\\' => 22,
         ),
         'T' => 
         array (
@@ -99,6 +104,7 @@ class ComposerStaticInit9d559ab354f63dc7e9a3fc1a03ad7d46
         ),
         'L' => 
         array (
+            'League\\Csv\\' => 11,
             'League\\Container\\' => 17,
             'Laravel\\Prompts\\' => 16,
         ),
@@ -158,6 +164,10 @@ class ComposerStaticInit9d559ab354f63dc7e9a3fc1a03ad7d46
         'phootwork\\collection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phootwork/collection',
+        ),
+        'enshrined\\svgSanitize\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/enshrined/svg-sanitize/src',
         ),
         'Twig\\' => 
         array (
@@ -339,6 +349,10 @@ class ComposerStaticInit9d559ab354f63dc7e9a3fc1a03ad7d46
         'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
+        ),
+        'League\\Csv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/csv/src',
         ),
         'League\\Container\\' => 
         array (
