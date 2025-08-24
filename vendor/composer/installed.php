@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '35d6443dc7580ab4aa5e0b5e7c46bd54b0e65886',
+        'reference' => '8c51783979e8c5b588abdbbe277d4d9388a14ddb',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -379,6 +379,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/lingotek' => array(
+            'pretty_version' => '11.0.1',
+            'version' => '11.0.1.0',
+            'reference' => '11.0.1',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/lingotek',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/metatag' => array(
             'pretty_version' => '2.1.1',
             'version' => '2.1.1.0',
@@ -436,7 +445,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '35d6443dc7580ab4aa5e0b5e7c46bd54b0e65886',
+            'reference' => '8c51783979e8c5b588abdbbe277d4d9388a14ddb',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
